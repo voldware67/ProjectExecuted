@@ -70,12 +70,12 @@ local function SideBtn(text,color)
 end
 
 local CM  = SideBtn("CM", Color3.fromRGB(70,70,70))
-local HUB = SideBtn("HUB",Color3.fromRGB(70,70,70))
+local SC = SideBtn("SC",Color3.fromRGB(70,70,70))
 local HM  = SideBtn("HM", Color3.fromRGB(70,70,70))
 local X   = SideBtn("X",  Color3.fromRGB(180,40,40))
 
 CM.Position  = UDim2.fromOffset(10,20)
-HUB.Position = UDim2.fromOffset(10,70)
+SC.Position = UDim2.fromOffset(10,70)
 HM.Position  = UDim2.fromOffset(10,120)
 X.Position   = UDim2.fromOffset(10,240)
 
@@ -97,7 +97,7 @@ end
 
 local Home = NewPage("Home")
 local Cmd  = NewPage("Command")
-local Hub  = NewPage("Hub")
+local SC  = NewPage("SC")
 
 Home.Visible = true
 
@@ -336,7 +336,7 @@ end
 
 CM.MouseButton1Click:Connect(function() Show(Cmd) end)
 HM.MouseButton1Click:Connect(function() Show(Home) end)
-HUB.MouseButton1Click:Connect(function() Show(Hub) end)
+SC.MouseButton1Click:Connect(function() Show(Hub) end)
 X.MouseButton1Click:Connect(function()
 	Main.Visible = false
 	OpenBtn.Visible = true
@@ -346,4 +346,3 @@ OpenBtn.MouseButton1Click:Connect(function()
 	Main.Visible = true
 	OpenBtn.Visible = false
 end)
-
